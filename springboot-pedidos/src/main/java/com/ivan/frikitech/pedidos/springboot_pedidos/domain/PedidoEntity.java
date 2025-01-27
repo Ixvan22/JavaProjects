@@ -16,7 +16,6 @@ public class PedidoEntity {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "pedido_id")
   private Long pedidoId;
-  // TODO Clave foranea
   private Long productoId;
   private int cantidad;
   private double total;

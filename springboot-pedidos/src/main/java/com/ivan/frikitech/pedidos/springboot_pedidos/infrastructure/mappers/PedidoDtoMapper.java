@@ -4,8 +4,6 @@ import com.ivan.frikitech.pedidos.springboot_pedidos.domain.PedidoEntity;
 import com.ivan.frikitech.pedidos.springboot_pedidos.infrastructure.dto.PedidoDto;
 import org.mapstruct.Mapper;
 
-import java.util.List;
-
 @Mapper(componentModel = "spring")
 public interface PedidoDtoMapper {
 
