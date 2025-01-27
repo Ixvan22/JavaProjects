@@ -56,4 +56,9 @@ public class ProductoController {
 
     return ResponseEntity.ok(pedidoMapper.toDto(pedidoRepository.save(new PedidoEntity(null, productoId, cantidad, total))));
   }
+
+  @GetMapping("/pedidos")
+  public ResponseEntity<List<PedidoDto>> listarPedidos() {
+    return ResponseEntity.ok(pedidoMapper.productoEntitiesToDtos(pedidoRepository.findAll()));
+  }
 }
