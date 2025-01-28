@@ -8,5 +8,4 @@ import java.util.List;
 public interface ProductoRepository extends JpaRepository<ProductoEntitty, Long> {
 
   List<ProductoEntitty> findAll();
-  ProductoEntitty findByProductoId(Long productoId);
 }

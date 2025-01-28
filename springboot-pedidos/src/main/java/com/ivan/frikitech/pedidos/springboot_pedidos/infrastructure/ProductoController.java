@@ -51,7 +51,7 @@ public class ProductoController {
   public ResponseEntity<PedidoDto> crearPedido(@RequestParam Long productoId,
                                                @RequestParam int cantidad) {
 
-    double precio = productoRepository.findByProductoId(productoId).getPrecio();
+    double precio = productoRepository.findById(productoId).orElseThrow().getPrecio();
     double total = pedidoService.calcularTotal(precio, cantidad);
 
     return ResponseEntity.ok(pedidoMapper.toDto(pedidoRepository.save(new PedidoEntity(null, productoId, cantidad, total))));
