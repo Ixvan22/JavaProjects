@@ -1,11 +1,11 @@
-package com.ivan.frikitech.pedidos.springboot_pedidos.infrastructure;
+package com.ivan.frikitech.pedidos.springboot_pedidos.infrastructure.controllers;
 
 import com.ivan.frikitech.pedidos.springboot_pedidos.application.PedidoUseCase;
 import com.ivan.frikitech.pedidos.springboot_pedidos.application.ProductUseCase;
-import com.ivan.frikitech.pedidos.springboot_pedidos.infrastructure.dto.PedidoDto;
-import com.ivan.frikitech.pedidos.springboot_pedidos.infrastructure.dto.ProductoDto;
-import com.ivan.frikitech.pedidos.springboot_pedidos.infrastructure.mappers.PedidoDtoMapper;
-import com.ivan.frikitech.pedidos.springboot_pedidos.infrastructure.mappers.ProductoDtoMapper;
+import com.ivan.frikitech.pedidos.springboot_pedidos.infrastructure.dto.Pedido;
+import com.ivan.frikitech.pedidos.springboot_pedidos.infrastructure.dto.Producto;
+import com.ivan.frikitech.pedidos.springboot_pedidos.infrastructure.mappers.PedidoMapper;
+import com.ivan.frikitech.pedidos.springboot_pedidos.infrastructure.mappers.ProductoMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,31 +22,31 @@ public class ProductoController {
   private final ProductUseCase productUseCase;
   private final PedidoUseCase pedidoUseCase;
 
-  private final ProductoDtoMapper productoMapper;
-  private final PedidoDtoMapper pedidoMapper;
+  private final ProductoMapper productoMapper;
+  private final PedidoMapper pedidoMapper;
 
   @PostMapping("/productos")
-  public ResponseEntity<ProductoDto> crearProducto(@RequestParam String nombre,
-                                                   @RequestParam String descripcion,
-                                                   @RequestParam double precio) {
+  public ResponseEntity<Producto> crearProducto(@RequestParam String nombre,
+                                                @RequestParam String descripcion,
+                                                @RequestParam double precio) {
 
     return ResponseEntity.ok(productoMapper.toDto(productUseCase.crearProducto(nombre, descripcion, precio)));
   }
 
   @GetMapping("/productos")
-  public ResponseEntity<List<ProductoDto>> listarProductos() {
+  public ResponseEntity<List<Producto>> listarProductos() {
     return ResponseEntity.ok(productoMapper.productoEntitiesToDtos(productUseCase.listProducts()));
   }
 
   @PostMapping("/pedidos")
-  public ResponseEntity<PedidoDto> crearPedido(@RequestParam Long productoId,
-                                               @RequestParam int cantidad) {
+  public ResponseEntity<Pedido> crearPedido(@RequestParam Long productoId,
+                                            @RequestParam int cantidad) {
 
     return ResponseEntity.ok(pedidoMapper.toDto(pedidoUseCase.crearPedido(productoId, cantidad)));
   }
 
   @GetMapping("/pedidos")
-  public ResponseEntity<List<PedidoDto>> listarPedidos() {
+  public ResponseEntity<List<Pedido>> listarPedidos() {
     return ResponseEntity.ok(pedidoMapper.productoEntitiesToDtos(pedidoUseCase.listPedidos()));
   }
 

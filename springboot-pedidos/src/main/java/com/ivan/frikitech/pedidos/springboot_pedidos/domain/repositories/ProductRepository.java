@@ -1,6 +1,6 @@
 package com.ivan.frikitech.pedidos.springboot_pedidos.domain.repositories;
 
-import com.ivan.frikitech.pedidos.springboot_pedidos.domain.Product;
+import com.ivan.frikitech.pedidos.springboot_pedidos.domain.models.Product;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

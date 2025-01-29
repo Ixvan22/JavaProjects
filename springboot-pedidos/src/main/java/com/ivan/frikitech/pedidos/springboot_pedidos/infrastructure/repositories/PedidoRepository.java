@@ -1,6 +1,6 @@
-package com.ivan.frikitech.pedidos.springboot_pedidos.infrastructure;
+package com.ivan.frikitech.pedidos.springboot_pedidos.infrastructure.repositories;
 
-import com.ivan.frikitech.pedidos.springboot_pedidos.infrastructure.repositories.PedidoEntity;
+import com.ivan.frikitech.pedidos.springboot_pedidos.infrastructure.repositories.entities.PedidoEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

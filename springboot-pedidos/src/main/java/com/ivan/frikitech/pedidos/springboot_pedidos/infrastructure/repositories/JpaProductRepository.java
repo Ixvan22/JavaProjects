@@ -1,8 +1,8 @@
 package com.ivan.frikitech.pedidos.springboot_pedidos.infrastructure.repositories;
 
-import com.ivan.frikitech.pedidos.springboot_pedidos.domain.Product;
+import com.ivan.frikitech.pedidos.springboot_pedidos.domain.models.Product;
 import com.ivan.frikitech.pedidos.springboot_pedidos.domain.repositories.ProductRepository;
-import com.ivan.frikitech.pedidos.springboot_pedidos.infrastructure.ProductoRepository;
+import com.ivan.frikitech.pedidos.springboot_pedidos.infrastructure.repositories.entities.ProductoEntity;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;

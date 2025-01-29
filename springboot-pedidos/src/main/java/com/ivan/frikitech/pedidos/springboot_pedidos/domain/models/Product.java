@@ -1,4 +1,4 @@
-package com.ivan.frikitech.pedidos.springboot_pedidos.domain;
+package com.ivan.frikitech.pedidos.springboot_pedidos.domain.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

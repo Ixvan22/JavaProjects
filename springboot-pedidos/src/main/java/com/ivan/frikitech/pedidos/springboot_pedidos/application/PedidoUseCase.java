@@ -1,6 +1,6 @@
 package com.ivan.frikitech.pedidos.springboot_pedidos.application;
 
-import com.ivan.frikitech.pedidos.springboot_pedidos.domain.Pedido;
+import com.ivan.frikitech.pedidos.springboot_pedidos.domain.models.Pedido;
 import com.ivan.frikitech.pedidos.springboot_pedidos.domain.repositories.PedidosRepository;
 import com.ivan.frikitech.pedidos.springboot_pedidos.domain.repositories.ProductRepository;
 import lombok.RequiredArgsConstructor;

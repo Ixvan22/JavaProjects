@@ -1,4 +1,4 @@
-package com.ivan.frikitech.pedidos.springboot_pedidos.infrastructure.repositories;
+package com.ivan.frikitech.pedidos.springboot_pedidos.infrastructure.repositories.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
